@@ -4,12 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 
 public class test extends JPanel {
-	// private int boardSizex = 500;
-	// private int boardSizey = 500;
+	Earth earth = new Earth();
 
 	// temporära variabler astroiden ska bli en egen klass osv
 	int x = 0, y = 0, movmentx = 1, movmenty = 1;
-	int x1 = 600, y1 = 400;
+	int x1 = 10, y1 = 10;
 
 	private void move() {
 		// Lite dumma rörelseregler vill att den ska åka runt i rutan
@@ -35,8 +34,9 @@ public class test extends JPanel {
 	public void paint(Graphics g) {
 		// Super paint gör att den tidigare utritningen försvinner
 		super.paint(g);
-		g.fillOval(x, y, 25, 25);
-		g.fillOval(x1, y1, 70, 70);
+		//g.fillOval(x, y, 25, 25);
+		g.fillOval(x1, y1, 10, 10);
+		earth.display(g);
 	}
 
 	public static void main(String[] args) throws InterruptedException {
